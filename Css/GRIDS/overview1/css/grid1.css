@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* LAYOUT */
+
+html {
+    margin: 30px 0;
+}
+
+body {
+    width: 96%;
+    margin: auto;
+    font-family: arial;
+    color: #777;
+}
+header, footer {
+    text-align: center;
+    width: 100%;
+    background: teal;
+    padding: 20px;
+    color: #fff;
+}
+main {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+/* GRID BOXES */
+
+header, footer {
+    grid-column: span 12;
+}
+
+article {
+    padding: 6px;
+    background: lightseagreen;
+    color: #fff;
+    text-align: center;
+}
+
+/* Full */
+.box1 {
+    grid-column: span 12;
+}
+.box2, .box3 {
+    grid-column: span 6;
+}
+.box4, .box5, .box6 {
+    grid-column: span 4;
+}
+.box7,
+.box8,
+.box9, .box10{
+    grid-column: span 3;
+}
+.box11,
+.box12,
+.box13,
+.box14, .box15, .box16 {
+    grid-column: span 2;
+}
+.box171,
+.box18,
+.box19,
+.box20,
+.box21,
+.box22, 
+.box23,
+.box24,
+.box25,
+.box26,
+.box27,
+.box28 {
+    grid-column: span 1;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 780px) {
+     article {
+        grid-column: span 12 !important; 
+     }
+     main {
+        grid-template-rows: repeat(29, 1fr);
+     }
+     
+}
